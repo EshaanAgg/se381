@@ -1,0 +1,78 @@
+[
+  {
+    "classes": [
+      "Cashier"
+    ],
+    "attributes": [
+      {
+        "name": "FinancialOperations",
+        "class": "Cashier"
+      }
+    ],
+    "relationships": [
+      {
+        "subject": "Cashier",
+        "predicate": "log",
+        "object": "FinancialOperations"
+      },
+      {
+        "subject": "Cashier",
+        "predicate": "track",
+        "object": "Operations"
+      }
+    ]
+  },
+  {
+    "classes": [
+      "Cashier",
+      "Table"
+    ],
+    "attributes": [
+      {
+        "name": "Tabs",
+        "class": "Table"
+      }
+    ],
+    "relationships": [
+      {
+        "subject": "Cashier",
+        "predicate": "display",
+        "object": "Tabs"
+      },
+      {
+        "subject": "Cashier",
+        "predicate": "continueWith",
+        "object": "Payment"
+      }
+    ]
+  },
+  {
+    "classes": [
+      "Cashier",
+      "Tab"
+    ],
+    "attributes": [
+      {
+        "name": "SpecifiedAmounts",
+        "class": "Tab"
+      }
+    ],
+    "relationships": [
+      {
+        "subject": "Cashier",
+        "predicate": "divide",
+        "object": "Tab"
+      },
+      {
+        "subject": "Cashier",
+        "predicate": "help",
+        "object": "Customer"
+      },
+      {
+        "subject": "Customer",
+        "predicate": "payBy",
+        "object": "GoingDutch"
+      }
+    ]
+  }
+]

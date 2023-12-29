@@ -1,0 +1,3 @@
+As a cashier, I want financial operations to be logged by the system, so that I can track operations.
+As a cashier, I want to display tabs of a table, so that I can continue with the payment.
+As a cashier, I want to divide the tab into specified amounts, so that I can help customers who pay by going Dutch.

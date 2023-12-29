@@ -1,0 +1,31 @@
+{
+	"classes": ["FacultyMember", "Student"],
+	"attributes": [
+		{
+			"name": "Attendance",
+			"class": "Student"
+		},
+		{
+			"name": "Regularity",
+			"class": "Student"
+		}
+	],
+	"relationships": [
+		{ "subject": "FacultyMember", "predicate": "mark", "object": "Attendance" },
+		{
+			"subject": "FacultyMember",
+			"predicate": "track",
+			"object": "Regularity"
+		},
+		{
+			"subject": "FacultyMember",
+			"predicate": "markAttendanceOf",
+			"object": "Student"
+		},
+		{
+			"subject": "FacultyMember",
+			"predicate": "trackRegularityOf",
+			"object": "Student"
+		}
+	]
+}
