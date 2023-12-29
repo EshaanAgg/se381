@@ -2,10 +2,7 @@
   {
     "input": "As a cashier, I want financial operations to be logged by the system, so that I can track operations.",
     "story": {
-      "classes": [
-        "Cashier",
-        "FinancialOperation"
-      ],
+      "classes": ["Cashier", "FinancialOperation"],
       "attributes": [
         {
           "name": "Logged",
@@ -29,10 +26,7 @@
   {
     "input": "As a cashier, I want to display tabs of a table, so that I can continue with the payment.",
     "story": {
-      "classes": [
-        "Cashier",
-        "Table"
-      ],
+      "classes": ["Cashier", "Table"],
       "attributes": [
         {
           "name": "Tabs",
@@ -56,10 +50,7 @@
   {
     "input": "As a cashier, I want to divide the tab into specified amounts, so that I can help customers who pay by going Dutch.",
     "story": {
-      "classes": [
-        "Cashier",
-        "Customer"
-      ],
+      "classes": ["Cashier", "Customer"],
       "attributes": [
         {
           "name": "Tab",

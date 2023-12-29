@@ -1,11 +1,11 @@
-import data from "./out.json" assert { type: "json" };
+import data from './out.json' assert { type: 'json' };
 
 let contentStr = data.map(
-	(item) => `
+  (item) => `
         <tr><td colspan=3>${item.input}</td></tr>
 
         <tr><th colspan=3>Classes</th></tr>
-        ${item.classes.map((cls) => `<tr><td colspan=3>${cls}</td></tr>`).join("")}
+        ${item.classes.map((cls) => `<tr><td colspan=3>${cls}</td></tr>`).join('')}
 
         <tr><th colspan=3>Attributes</th></tr>
         <tr>
@@ -13,15 +13,15 @@ let contentStr = data.map(
             <td colspan=2><u>Associated Class</u></td>
         </tr>
         ${item.attributes
-					.map(
-						(attr) => `
+          .map(
+            (attr) => `
             <tr>
                 <td>${attr.name}</td>
                 <td colspan=2>${attr.class}</td>
             </tr>
-        `
-					)
-					.join("")}
+        `,
+          )
+          .join('')}
         
         <tr><th colspan=3>Relatiosnhips</th></tr>
         <tr>
@@ -30,17 +30,17 @@ let contentStr = data.map(
             <td><u>Object</u></td>
         </tr>
         ${item.relationships
-					.map(
-						(r) => `
+          .map(
+            (r) => `
             <tr>
                 <td>${r.subject}</td>
                 <td>${r.predicate}</td>
                 <td>${r.object}</td>
             </tr>
-        `
-					)
-					.join("")}
-    `
+        `,
+          )
+          .join('')}
+    `,
 );
 
-document.getElementById("table").innerHTML = contentStr.join("<tr><td colspan=3></td></tr>");
+document.getElementById('table').innerHTML = contentStr.join('<tr><td colspan=3></td></tr>');

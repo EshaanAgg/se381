@@ -1,2 +1,7 @@
+# General files
 .env
 node_modules
+
+# Lab specific files
+lab1/data.txt
+lab1/out.json
