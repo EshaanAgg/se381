@@ -1,7 +1,7 @@
 import "dotenv/config";
 import OpenAI from "openai";
 import fs from "fs";
-import sampleResponse from "./sample.json" with { type: "json" };
+import sampleResponse from "./sample.json" assert { type: "json" };
 
 const generatePrompt = (input) => {
 	return `
@@ -43,7 +43,10 @@ const main = async () => {
 	const output = [];
 	for (const line of lines) {
 		const story = await generateStory(line);
-		output.push(story);
+		output.push({
+			input: line,
+			story,
+		});
 	}
 
 	fs.writeFileSync("lab1/out.json", JSON.stringify(output, null, 2));

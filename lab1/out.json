@@ -1,78 +1,92 @@
 [
   {
-    "classes": [
-      "Cashier"
-    ],
-    "attributes": [
-      {
-        "name": "FinancialOperations",
-        "class": "Cashier"
-      }
-    ],
-    "relationships": [
-      {
-        "subject": "Cashier",
-        "predicate": "log",
-        "object": "FinancialOperations"
-      },
-      {
-        "subject": "Cashier",
-        "predicate": "track",
-        "object": "Operations"
-      }
-    ]
+    "input": "As a cashier, I want financial operations to be logged by the system, so that I can track operations.",
+    "story": {
+      "classes": [
+        "Cashier",
+        "FinancialOperation"
+      ],
+      "attributes": [
+        {
+          "name": "Logged",
+          "class": "FinancialOperation"
+        }
+      ],
+      "relationships": [
+        {
+          "subject": "Cashier",
+          "predicate": "log",
+          "object": "FinancialOperation"
+        },
+        {
+          "subject": "Cashier",
+          "predicate": "track",
+          "object": "Operations"
+        }
+      ]
+    }
   },
   {
-    "classes": [
-      "Cashier",
-      "Table"
-    ],
-    "attributes": [
-      {
-        "name": "Tabs",
-        "class": "Table"
-      }
-    ],
-    "relationships": [
-      {
-        "subject": "Cashier",
-        "predicate": "display",
-        "object": "Tabs"
-      },
-      {
-        "subject": "Cashier",
-        "predicate": "continueWith",
-        "object": "Payment"
-      }
-    ]
+    "input": "As a cashier, I want to display tabs of a table, so that I can continue with the payment.",
+    "story": {
+      "classes": [
+        "Cashier",
+        "Table"
+      ],
+      "attributes": [
+        {
+          "name": "Tabs",
+          "class": "Table"
+        }
+      ],
+      "relationships": [
+        {
+          "subject": "Cashier",
+          "predicate": "display",
+          "object": "Tabs"
+        },
+        {
+          "subject": "Cashier",
+          "predicate": "continueWith",
+          "object": "Payment"
+        }
+      ]
+    }
   },
   {
-    "classes": [
-      "Cashier",
-      "Tab"
-    ],
-    "attributes": [
-      {
-        "name": "SpecifiedAmounts",
-        "class": "Tab"
-      }
-    ],
-    "relationships": [
-      {
-        "subject": "Cashier",
-        "predicate": "divide",
-        "object": "Tab"
-      },
-      {
-        "subject": "Cashier",
-        "predicate": "help",
-        "object": "Customer"
-      },
-      {
-        "subject": "Customer",
-        "predicate": "payBy",
-        "object": "GoingDutch"
-      }
-    ]
+    "input": "As a cashier, I want to divide the tab into specified amounts, so that I can help customers who pay by going Dutch.",
+    "story": {
+      "classes": [
+        "Cashier",
+        "Customer"
+      ],
+      "attributes": [
+        {
+          "name": "Tab",
+          "class": "Cashier"
+        },
+        {
+          "name": "Specified Amounts",
+          "class": "Cashier"
+        }
+      ],
+      "relationships": [
+        {
+          "subject": "Cashier",
+          "predicate": "divide",
+          "object": "Tab"
+        },
+        {
+          "subject": "Cashier",
+          "predicate": "help",
+          "object": "Customer"
+        },
+        {
+          "subject": "Cashier",
+          "predicate": "goDutchWith",
+          "object": "Customer"
+        }
+      ]
+    }
   }
 ]

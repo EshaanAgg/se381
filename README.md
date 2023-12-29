@@ -13,4 +13,4 @@ npm install
 node lab1/index.js
 ```
 
-The generated stories would be present in [out.json](./lab1/out.json).
+The generated stories would be present in [out.json](./lab1/out.json). To get the output as a table, you need to open the [index.html](./lab1/index.html) file with the [`LiveServer`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode. You can then copy and paste the generated table into an Excel.
