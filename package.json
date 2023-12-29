@@ -1,19 +1,25 @@
 {
   "name": "se",
   "version": "1.0.0",
-  "description": "",
+  "description": "All the lab files and scripts for CSE381: Softwarre Engineering course.",
   "main": "index.js",
   "scripts": {
-    "lab1": "node lab1/index.js",
-    "format": "npx prettier --write ."
+    "lab1": "node lab1/index.js && serve lab1",
+    "format": "prettier --write ."
   },
   "type": "module",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "software",
+    "engineering",
+    "cse381",
+    "lab"
+  ],
+  "author": "EshaanAgg",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "openai": "^4.24.1"
+    "openai": "^4.24.1",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "prettier": "^3.1.1"
