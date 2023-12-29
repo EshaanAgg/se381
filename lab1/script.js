@@ -1,18 +1,18 @@
 import data from './out.json' assert { type: 'json' };
 
-let contentStr = data.map(
+let content = data.map(
   (item) => `
         <tr><td colspan=3>${item.input}</td></tr>
 
-        <tr><th colspan=3>Classes</th></tr>
-        ${item.classes.map((cls) => `<tr><td colspan=3>${cls}</td></tr>`).join('')}
+        <tr><th colspan=3> Classes </th></tr>
+        ${item.story.classes.map((cls) => `<tr><td colspan=3>${cls}</td></tr>`).join('')}
 
         <tr><th colspan=3>Attributes</th></tr>
         <tr>
-            <td><u>Name</u></td>
-            <td colspan=2><u>Associated Class</u></td>
+            <td><u><center> Name </center></u></td>
+            <td colspan=2><u><center> Associated Class </center></u></td>
         </tr>
-        ${item.attributes
+        ${item.story.attributes
           .map(
             (attr) => `
             <tr>
@@ -23,13 +23,13 @@ let contentStr = data.map(
           )
           .join('')}
         
-        <tr><th colspan=3>Relatiosnhips</th></tr>
+        <tr><th colspan=3>Relationships</th></tr>
         <tr>
-            <td><u>Subject</u></td>
-            <td><u>Predicate</u></td>
-            <td><u>Object</u></td>
+            <td><u><center> Subject </center></u></td>
+            <td><u><center> Predicate </center></u></td>
+            <td><u><center> Object </center></u></td>
         </tr>
-        ${item.relationships
+        ${item.story.relationships
           .map(
             (r) => `
             <tr>
@@ -43,4 +43,4 @@ let contentStr = data.map(
     `,
 );
 
-document.getElementById('table').innerHTML = contentStr.join('<tr><td colspan=3></td></tr>');
+document.getElementById('table').innerHTML = content.join('<tr><td colspan=3 class="spacer-row"></td></tr>');
