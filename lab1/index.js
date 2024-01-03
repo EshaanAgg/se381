@@ -48,7 +48,6 @@ const main = async () => {
   const responses = await Promise.all(requestPromises);
 
   fs.writeFileSync('lab1/out.json', JSON.stringify(responses, null, 2));
-
   console.log('All the data has been generated!');
 };
 
